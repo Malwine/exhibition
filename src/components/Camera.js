@@ -1,7 +1,7 @@
-import React from 'react';
+import Component from 'preact';
 import { Entity } from 'aframe-react';
 
-export default class Camera extends React.Component {
+export default class Camera extends Component {
 
   render() {
     return (

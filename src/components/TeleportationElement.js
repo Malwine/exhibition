@@ -1,7 +1,7 @@
-import React from 'react';
+import Component from 'preact';
 import { Entity } from 'aframe-react';
 
-export default class TeleportationElement extends React.Component {
+export default class TeleportationElement extends Component {
 
   render() {
     const { destination, handleClick, ...rest} = this.props

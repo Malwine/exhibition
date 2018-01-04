@@ -1,9 +1,8 @@
 import AFRAME from 'aframe';
 import 'aframe-animation-component';
-import 'aframe-particle-system-component';
 import 'babel-polyfill';
 import {Entity, Scene} from 'aframe-react';
-import React from 'react';
+import Component from 'preact';
 import ReactDOM from 'react-dom';
 import drawComponent from 'aframe-draw-component';
 AFRAME.registerComponent("draw", drawComponent.component);
@@ -15,7 +14,7 @@ import Camera from './components/Camera';
 import TeleportationElement from './components/TeleportationElement';
 import Environment from './components/Environment';
 
-class App extends React.Component {
+class App extends Component {
   constructor(props) {
     super(props);
     this.state = {color: 'red', currentRoom: "navRoom"};
@@ -95,4 +94,6 @@ class App extends React.Component {
   }
 }
 
-ReactDOM.render(<App/>, document.querySelector('#sceneContainer'));
+document.addEventListener('DOMContentLoaded', () => {
+  render(<App/>, document.querySelector('#sceneContainer'));
+})

@@ -1,8 +1,8 @@
 import 'aframe';
 import {Entity} from 'aframe-react';
-import React from 'react';
+import Component from 'preact';
 
-export default class Environment extends React.Component {
+export default class Environment extends Component {
 
   render () {
     return (
